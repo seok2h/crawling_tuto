@@ -14,8 +14,11 @@ soup = BeautifulSoup(res.text, "lxml")
 
 print(soup.a)
 
+
 print(soup.find("a", attrs={"class": "GlobalNavigationBar__link--WMOzG"})) # class="" 인 a element를  찾아줘
-print(soup.find(attrs={"class": "GlobalNavigationBar__link--WMOzG"})) # class=""인 어떤 element를 찾아줘
+print(soup.find(attrs={"class": "GlobalNavigationBar__link--WMOzG"}))   # class=""인 어떤 element를 찾아줘
+# 만약 클래스를 여러개 검색하고 싶다 -> a 또는 b 클래스도 가져오고 싶다하면 attrs = {"class" : ["a", "b"]} 형태로 리스트로 감싸주면 된다
+
 
 # 실행되지 않음
 # print(soup.find("li", attrs={"class": "rank01"}) # li 태그의 클래스가 rank01인 것을 출력

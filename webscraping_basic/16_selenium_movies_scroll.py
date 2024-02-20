@@ -1,6 +1,8 @@
 from selenium import webdriver
 import time
 
+
+
 browser = webdriver.Chrome()
 browser.maximize_window()
 
@@ -32,3 +34,5 @@ while True:
     prev_height = curr_height
 
 print("스크롤 완료")
+
+

@@ -16,6 +16,7 @@ browser.get(url)
 
 # Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 detected_value = browser.find_element(By.ID, "detected_value")
-print(detected_value.text)  # ozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.185 Safari/537.36
+print(detected_value.text)  # Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+# HeadlessChrome/121.0.6167.185 Safari/537.36
 
 

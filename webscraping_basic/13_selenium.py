@@ -27,7 +27,7 @@ browser.get("http://www.naver.com")
 # elem.click()
 # elem.send_keys("입력할 무언가")
 # elem.clear() 텍스트 창 지워줌
-# elem.sned_keys(Keys.ENTER) 엔터 입력
+# elem.send_keys(Keys.ENTER) 엔터 입력
 # browser.close() 현재 탭 닫기
 # browser.quit() 전체 다 닫기
 

@@ -63,3 +63,4 @@ for i in range(1, 6):
             print(f"평점 : {rate}점 ({rate_cnt})개")
             print(f"바로가기 : https://www.coupang.com{link}")
             print("-"*100) # 줄 긋기
+            

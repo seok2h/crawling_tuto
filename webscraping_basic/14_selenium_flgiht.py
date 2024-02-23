@@ -26,7 +26,7 @@ WebDriverWait(browser, 30).until(EC.presence_of_element_located((By.XPATH, '//bu
 # time.sleep(1)
 browser.find_element(By.XPATH, '//button[text() = "국내"]').click()
 # browser.find_element(By.XPATH, '//button[contains() = "제주"]')
-jeju_button = browser.find_element(By.XPATH, '//i[contains(text(), "제주국제공항")]') # '제주국제공항'이라는 문자열이 포함된 태그를 찾아준다
+jeju_button = browser.find_element(By.XPATH, '//i[contains(text(), "제주국제공항")]')  # '제주국제공항'이라는 문자열이 포함된 태그를 찾아준다
 jeju_button.click()
 # 항공권 검색 버튼 누르기
 browser.find_element(By.XPATH, '//span[text() = "항공권 검색"]').click()

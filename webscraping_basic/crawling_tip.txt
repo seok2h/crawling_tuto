@@ -1,0 +1,66 @@
+BeautifulSoup
+만약 클래스를 여러개 검색하고 싶다 -> (a 또는 b 클래스도 가져오고 싶다)
+attrs={"class": ["a", "b"]}
+
+객체의 형제를 가져옴
+elem.next_sibling
+
+이전 형제를 가져옴
+elem.previous_sibling
+
+부모 객체를 가져옴
+elem.parent
+
+다음 형제를 찾는데 안에 조건을 토대로 찾아줌
+elem.find_next_sibling("")
+
+형제 모두를 가져옴
+elem.find_next_siblings("")
+
+
+selenium
+셀레니움은 클래스 명에 공백이 들어가면 .으로 대체한다
+CLASS_NAME: "any class"
+browser.find_elemnt(By.CLASS_NAME, "any.class")
+
+태그가 <b>이고 택스트 'a'를 가지고 있을 때 xpath로 찾는 방법
+browser.find_element(By.XPATH, '//b[text() = "a"]')
+
+태그가 <b>이고 택스트 '3'를 가지고 있는 요소가 나타날 때까지 30초 기다리게 하는 법
+WebDriverWait(browser, 30).until(EC.presence_of_element_located((By.XPATH, '//b[text() = "3"]')))
+
+태그가 <i>이고 택스트 'a'를 포함하고 있는 요소를 xpath로 찾는 방법
+browser.find_element(By.XPATH, '//i[contains(text(), "a")]')
+
+태그가 <div>이고 클래스명 "some_class"를 가지고 있는 요소를 xpath로 찾는 방법
+browser.find_element(By.XPATH, '//div[@class="domestic_Flight__sK0eA"]')
+
+화면 아래로 내리기
+browser.execute_script("window.scrollTo(0, 1080)")
+
+현재 문서 높이만큼 내림
+browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+
+현재 문서 높이 불러오기
+browser.execute_script("return document.body.scrollHeight")
+
+크롬 브라우저 옵션 설정하는 법
+options = webdriver.ChromeOptions()
+
+headless 크롬으로 작동시키는 법
+options.add_argument("headless")
+options.headless = True -> 작동 안함 (?)
+
+브라우저 크기 지정하는 법
+options.add_argument("window-size=1920x080")
+
+브라우저 사진 찍는 법
+browser.get_screenshot_as_file("image.png")
+
+사이트에 있는 div 창의 높이를 불러오는 법
+borwser.execute_script("return arguments[0].scrollHeight", elem)
+    - 여기서 elem은 div 태그가 저장되어있는 변수
+    - 그리고 저장해야하는 div는 박스가 파란색으로 표시되고 스크롤바가 초록색으로 나타나는 요소를 저장해야함 (그래야 내릴 수 있음)
+
+사이트에 있는 div 창을 끝까지 스크롤 하는 법
+browser.execute_script("arguments[0].scrollBy(0, arguments[0].scrollHeight)", elem)
